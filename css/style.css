@@ -2482,3 +2482,8 @@ a.contextual-links-trigger
 #cmdSearch {
     float: right;
 }
+
+.downloadlink img {
+    border: none;
+    vertical-align: middle;   
+}
