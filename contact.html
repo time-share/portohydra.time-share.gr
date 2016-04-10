@@ -1,0 +1,47 @@
+---
+layout: default
+name: contact
+html_title: Επικοινωνία
+menu_text: Επικοινωνία
+menu_order: 40
+lang: el
+permalink: /el/contact/
+redirect_from:
+  - /el/contact
+---
+<p>Στοιχεία επικοινωνίας:</p>
+<p></p>
+<p>Σύλλογος Χρονομεριστών Ξενοδοχειακού Συγκροτήματος PORTO HYDRA</p>
+<p></p>
+<p>
+    Σόλωνος 40, ΤΚ: 10672, Αθήνα<br>
+    Υπ'όψη Κας Μαρίνου Γιαννούλας<br>
+    ΤΗΛ: 6942475677
+</p>
+<p>
+    e-mail: <a href="mailto:marinoug@ath.forthnet.gr">marinoug@ath.forthnet.gr</a>
+</p>
+<p>Ή χρησιμοποιήστε την παρακάτω φόρμα επικοινωνίας:</p>
+<form name="" action="//formspree.io/{{ site.contactform_mailTo }}" method="post" id="commentForm">
+    <input type="hidden" name="_next" value="{{site.url}}/{{page.lang}}/contact/thanks/"/>
+    <input type="text" name="_gotcha" style="display:none" />
+    <p>
+        <label for="contactName">Το όνομα σας: <span class="form-required">*</span></label>
+        <input type="text" id="contactName" name="name" value="" size="40" class="form-control smaller" aria-required="true" aria-invalid="false" placeholder="Όνομα" required="">
+    </p>
+    <p>
+        <label for="contactEmail">Η διεύθυνση e-mail σας: <span class="form-required">*</span></label>
+        <input type="email" id="contactEmail" name="email" value="" size="40" class="form-control smaller" aria-required="true" aria-invalid="false" placeholder="Email" required="">
+    </p>
+    <p>
+        <label for="contactSubject">Θέμα: <span class="form-required">*</span></label>
+        <input type="text" id="contactSubject" name="_subject" value="" size="40" class="form-control smaller" aria-required="true" aria-invalid="false" placeholder="Θέμα" required="">
+    </p>
+    <p>
+        <label for="contactMessage">Μήνυμα: <span class="form-required">*</span></label>
+        <textarea name="message" id="contactMessage" cols="40" rows="10" class="form-control" aria-invalid="false" placeholder="Μήνυμα" required=""></textarea>
+    </p>
+    <div>
+        <div class="form-actions form-wrapper"><span class="webbutton-wrapper"><span class="webbutton-l"></span><span class="webbutton-r"></span><input type="submit" value="Αποστολή μηνύματος" class="form-submit webbutton" /></span></div>
+    </div>
+</form>

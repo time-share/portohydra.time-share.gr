@@ -1,0 +1,46 @@
+---
+layout: default
+name: contact
+html_title: Contact
+menu_text: Contact
+menu_order: 40
+lang: en
+permalink: /en/contact/
+redirect_from:
+  - /en/contact
+---
+<p>Contact Info:</p>
+<p></p>
+<p>PORTO HYDRA Timeshare Owners Assosiation</p>
+<p></p>
+<p>
+    40 Solonos Str, 10672, ATHENS<br/>
+    Attn: Mrs Giannoula Marinou<br />
+    Mobile: 00306942475677
+</p>
+<p>
+    e-mail: <a href="mailto:marinoug@ath.forthnet.gr">marinoug@ath.forthnet.gr</a>
+</p>
+<p>Or use the contact form below: </p>
+<form name="" action="//formspree.io/{{ site.contactform_mailTo }}" method="post" id="commentForm">
+    <input type="hidden" name="_next" value="{{site.url}}/{{page.lang}}/contact/thanks/" />
+    <p>
+        <label for="contactName">Name: <span class="form-required">*</span></label>
+        <input type="text" id="contactName" name="name" value="" size="40" class="form-control smaller" aria-required="true" aria-invalid="false" placeholder="Name:" required="">
+    </p>
+    <p>
+        <label for="contactEmail">Email: <span class="form-required">*</span></label>
+        <input type="email" id="contactEmail" name="email" value="" size="40" class="form-control smaller" aria-required="true" aria-invalid="false" placeholder="Email:" required="">
+    </p>
+    <p>
+        <label for="contactSubject">Subject: <span class="form-required">*</span></label>
+        <input type="text" id="contactSubject" name="_subject" value="" size="40" class="form-control smaller" aria-required="true" aria-invalid="false" placeholder="Subject:" required="">
+    </p>
+    <p>
+        <label for="contactMessage">Message: <span class="form-required">*</span></label>
+        <textarea name="message" id="contactMessage" cols="40" rows="10" class="form-control" aria-invalid="false" placeholder="Message:" required=""></textarea>
+    </p>
+    <div>
+        <div class="form-actions form-wrapper"><span class="webbutton-wrapper"><span class="webbutton-l"></span><span class="webbutton-r"></span><input type="submit" value="Send comment" class="form-submit webbutton" /></span></div>
+    </div>
+</form>

@@ -151,3 +151,7 @@ a.gsc-trailing-more-results:link {
 .gcsc-branding,.gsc-above-wrapper-area,.gsc-resultsHeader {
     display: none;
 }
+
+.gsc-adBlock {
+    display: none;
+}

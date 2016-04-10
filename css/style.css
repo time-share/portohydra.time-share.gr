@@ -2500,3 +2500,11 @@ a.contextual-links-trigger
     overflow: hidden;
     height: 1px;
 }
+
+#commentForm label {
+    display: block;
+    font-weight: bold;
+}
+label.error, .form-required {
+    color: #ff0000;
+}

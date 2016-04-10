@@ -1,4 +1,12 @@
-<script src="{{ site.url }}/js/jquery.js"></script>
+<!-- Various old browser fixes -->
+<!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script> <script>window.attachEvent('onload', function() { CFInstall.check({ mode: 'overlay' }) })</script>
+<![endif]-->
+<!--[if lt IE 9]>
+    <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="{{ site.url }}/js/script.js"></script>
 {% if page.name == "search.html" %}
 {% include searchScripts.html %}
@@ -9,11 +17,20 @@
         i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
             (i[r].q = i[r].q || []).push(arguments)
         }, i[r].l = 1 * new Date(); a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
     })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
     ga('create', '{{ site.google_analytics_id }}', 'auto');
     ga('send', 'pageview');
 </script>{% endif %}
 {% if site.shareaholic_site_id %}
 <script type='text/javascript' src='//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js' data-shr-siteid='{{site.shareaholic_site_id}}' data-cfasync='false' async='async'></script>
+{% endif %}
+{% if page.name == "contact.html" %}
+<script type='text/javascript' src='{{site.url}}/js/jquery-validation-1.14.0/jquery.validate.min.js'></script>
+{% if page.lang == "el" %}
+<script type='text/javascript' src='{{site.url}}/js/jquery-validation-1.14.0/localization/messages_el.min.js'></script>
+{% endif %}
+<script type='text/javascript'>
+    $("#commentForm").validate();
+</script>
 {% endif %}

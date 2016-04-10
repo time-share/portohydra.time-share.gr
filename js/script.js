@@ -18,9 +18,7 @@
 
 /* begin Menu */
 jQuery(function () {
-    if (!jQuery.browser.msie || parseInt(jQuery.browser.version) > 7) return;
     jQuery('ul.webhmenu>li:not(:first-child)').each(function () { jQuery(this).prepend('<span class="webhmenu-separator"> </span>'); });
-    if (!jQuery.browser.msie || parseInt(jQuery.browser.version) > 6) return;
     jQuery('ul.webhmenu li').each(function () {
         this.j = jQuery(this);
         this.UL = this.j.children('ul:first');
@@ -70,81 +68,6 @@ function setHMenuOpenDirection(menuInfo) {
 }
 /* end Menu */
 
-/* begin MenuSubItem */
-
-jQuery(function () {
-    if (!jQuery.browser.msie) return;
-    var ieVersion = parseInt(jQuery.browser.version);
-    if (ieVersion > 7) return;
-
-    /* Fix width of submenu items.
-    * The width of submenu item calculated incorrectly in IE6-7. IE6 has wider items, IE7 display items like stairs.
-    */
-    jQuery.each(jQuery("ul.webhmenu ul"), function () {
-        var maxSubitemWidth = 0;
-        var submenu = jQuery(this);
-        var subitem = null;
-        jQuery.each(submenu.children("li").children("a"), function () {
-            subitem = jQuery(this);
-            var subitemWidth = subitem.outerWidth();
-            if (maxSubitemWidth < subitemWidth)
-                maxSubitemWidth = subitemWidth;
-        });
-        if (subitem != null) {
-            var subitemBorderLeft = parseInt(subitem.css("border-left-width"), 10) || 0;
-            var subitemBorderRight = parseInt(subitem.css("border-right-width"), 10) || 0;
-            var subitemPaddingLeft = parseInt(subitem.css("padding-left"), 10) || 0;
-            var subitemPaddingRight = parseInt(subitem.css("padding-right"), 10) || 0;
-            maxSubitemWidth -= subitemBorderLeft + subitemBorderRight + subitemPaddingLeft + subitemPaddingRight;
-            submenu.children("li").children("a").css("width", maxSubitemWidth + "px");
-        }
-    });
-
-    if (ieVersion > 6) return;
-    jQuery("ul.webhmenu ul>li:first-child>a").css("border-top-width", "0px");
-});
-/* end MenuSubItem */
-
-/* begin Layout */
-jQuery(function () {
-     var c = jQuery('div.webcontent');
-    if (c.length !== 1) return;
-    var s = c.parent().children('.weblayout-cell:not(.webcontent)');
-
-
-    if (jQuery.browser.msie && parseInt(jQuery.browser.version) < 8) {
-        jQuery(window).bind('resize', function() {
-            var w = 0;
-            c.hide();
-            s.each(function() { w += this.clientWidth; });
-            c.w = c.parent().width(); c.css('width', c.w - w + 'px');
-            c.show();
-        });
-    }
-
-    jQuery(window).trigger('resize');
-});/* end Layout */
-
-/* begin Button */
-function artButtonSetup(className) {
-    jQuery.each(jQuery("a." + className + ", button." + className + ", input." + className), function (i, val) {
-        var b = jQuery(val);
-        if (!b.parent().hasClass('webbutton-wrapper')) {
-            if (b.is('input')) b.val(b.val().replace(/^\s*/, '')).css('zoom', '1');
-            if (!b.hasClass('webbutton')) b.addClass('webbutton');
-            jQuery("<span class='webbutton-wrapper'><span class='webbutton-l'> </span><span class='webbutton-r'> </span></span>").insertBefore(b).append(b);
-            if (b.hasClass('active')) b.parent().addClass('active');
-        }
-        b.mouseover(function () { jQuery(this).parent().addClass("hover"); });
-        b.mouseout(function () { var b = jQuery(this); b.parent().removeClass("hover"); if (!b.hasClass('active')) b.parent().removeClass('active'); });
-        b.mousedown(function () { var b = jQuery(this); b.parent().removeClass("hover"); if (!b.hasClass('active')) b.parent().addClass('active'); });
-        b.mouseup(function () { var b = jQuery(this); if (!b.hasClass('active')) b.parent().removeClass('active'); });
-    });
-}
-jQuery(function() { artButtonSetup("webbutton"); });
-
-/* end Button */
-
 /* begin VMenu */
 jQuery(function() {
     if (!jQuery('html').hasClass('ie7')) return;
@@ -184,14 +107,3 @@ jQuery(function() {
         };
     });
 });
-
-/* Image Assist module support */
-jQuery(function() {
-    var imgAssistElem = parent.document.getElementsByName("img_assist_header");
-    if (null != imgAssistElem && imgAssistElem.length > 0) {
-        imgAssistElem[0].scrolling = "no";
-        imgAssistElem[0].style.height = "150px";
-    }
-});
-
-
