@@ -1,0 +1,339 @@
+/* begin Page */
+.cleared {
+   width:1px;
+}
+/* Start Box */
+.webbox, .webbox-body {
+   zoom:1;
+}
+/* End Box */
+/* Start Bar */
+.webbar{
+   zoom:1;
+}
+/* End Bar */
+/* end Page */
+
+/* begin Box, Sheet */
+.websheet {
+   background:#FFFFFF;
+}
+/* end Box, Sheet */
+
+/* begin Header */
+.webheader {
+   zoom:expression(runtimeStyle.zoom=1,insertBefore(document.createElement('div'),firstChild).className='webheader-png',insertBefore(document.createElement('div'),firstChild).className='webheader-jpeg');
+   z-index: 1;
+}
+
+.webheader-png
+{
+   position: absolute;
+   z-index:-2;
+   top: 0;
+   width:100%;
+   height: 125px;
+   background-image: url('../images/header.png');
+   background-repeat: no-repeat;
+   background-position:top center;
+}
+
+.webheader-jpeg
+{
+   position: absolute;
+   z-index:-1;
+   top: 0;
+   width:expression(parentNode.clientWidth - 2 * 15 + 'px');
+   left:15px;
+   height: 125px;
+   background-image: url('../images/header.jpg');
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+/* end Header */
+
+/* begin HeaderObject */
+div.webheaderobject{
+   font-size: 1px;
+}
+/* end HeaderObject */
+
+/* begin Menu */
+ul.webhmenu, ul.webhmenu ul, ul.webhmenu li, ul.webhmenu a {
+   zoom:1;
+}
+.webhmenu li.webhmenuhover{
+   z-index: 10000;
+}
+.webhmenu .webhmenuhoverUL{
+   visibility: visible;
+   top: 100%;
+   left: 0;
+}
+.webhmenu .webhmenuhoverUL .webhmenuhoverUL{
+   top: 0;
+   left: 100%;
+}
+.webhmenu ul li {
+   float: left !important;
+   clear: both;
+   width: 100%;
+}
+.webnav
+{
+   zoom: 1;
+   height: 30px;
+   background:#B2D1D7;
+}
+
+/* end Menu */
+
+/* begin MenuItem */
+.webhmenu a 
+{
+   display:inline-block;
+   color: #1C3236;
+   padding: 0 12px;
+   line-height: 24px;
+   text-align: center;
+}
+
+.webhmenu a.active 
+{
+   color: #CDE8EE;
+   background-color:#378FA4;
+}
+
+.webhmenu a:hover, .webhmenuhoverA,  .webhmenuhover a 
+{
+   color: #103942;
+   background-color:#B2D1D7;
+}
+
+/* end MenuItem */
+
+/* begin MenuSeparator */
+ul.webhmenu li {
+   margin-left:expression(this.previousSibling==null?'0':'8px');
+}
+ul.webhmenu li li{
+   margin-left:0;
+}
+
+/* end MenuSeparator */
+
+/* begin MenuSubItem */
+.webhmenu ul a 
+{
+   color: #182B2F !important;
+   float: left;
+}
+
+.webhmenu ul a:hover, .webhmenu ul .webhmenuhover .webhmenuhoverA 
+{
+   color: #000000 !important;
+   background-position: left bottom;
+   border-top-width: 0 !important;
+}
+
+/* end MenuSubItem */
+
+/* begin Layout */
+.webcontent-layout, .webcontent-layout-row, .weblayout-cell 
+{
+   display: block;
+   zoom: 1;
+}
+.weblayout-cell
+{
+   position:relative;
+   float: left;
+   clear: right;
+}
+/* end Layout */
+
+/* begin Button */
+.webbutton-wrapper{
+   zoom: 1;
+}
+.webbutton-wrapper .webbutton-l, .webbutton-wrapper .webbutton-r {
+   display: none;
+}
+.webbutton-wrapper .webbutton {
+   float: left;
+}
+/* end Button */
+
+/* begin Box, Block, VMenuBlock */
+.webvmenublock {
+   background:#DEF3F7;
+}
+/* end Box, Block, VMenuBlock */
+
+/* begin BlockHeader, VMenuBlockHeader */
+.webvmenublockheader {
+   background:#DEF3F7;
+}
+/* end BlockHeader, VMenuBlockHeader */
+
+/* begin Box, Box, VMenuBlockContent */
+.webvmenublockcontent {
+   background:#DEF3F7;
+}
+
+/* end Box, Box, VMenuBlockContent */
+
+/* begin VMenuItem */
+ul.webvmenu, ul.webvmenu ul, ul.webvmenu li, ul.webvmenu a
+{
+   position:relative;
+   zoom: 1;
+}
+
+ul.webvmenu li {
+   z-index:0;
+   margin-top:expression(this.previousSibling==null?'0':'1px');
+}
+ul.webvmenu ul{
+   margin-top:1px;
+   padding-bottom: 10px;
+}
+
+ul.webvmenu a 
+{
+   color: #111F22;
+   background-color:#DEF3F7;
+   padding: 0 7px 0 7px;
+   height: 26px;
+   line-height: 26px;
+}
+
+.webvmenu a.active 
+{
+   color: #D9EDF2;
+   background-color:#71BDD0;
+}
+
+ul.webvmenu a:hover
+{
+   color: #134753;
+   background-color:#41B8D2;
+}
+
+/* end VMenuItem */
+
+/* begin VMenuSubItem */
+ul.webvmenu ul a {
+   color: #111F22 !important;
+}
+ul.webvmenu li li {
+   padding-top:expression(this.previousSibling==null?'10px':'0');
+   margin-top:expression(this.previousSibling==null?'0':'4px');
+}
+ 
+ul.webvmenu ul ul {
+   margin-top:4px;
+}
+ul.webvmenu ul a.active {
+   color: #2B7182 !important;
+}
+ul.webvmenu ul a:hover {
+   color: #1E6E80 !important;
+}	
+/* end VMenuSubItem */
+
+/* begin Box, Block */
+.webblock {
+   background:#DEF3F7;
+}
+/* end Box, Block */
+
+/* begin BlockHeader */
+.webblockheader {
+   background:#DEF3F7;
+}
+/* end BlockHeader */
+
+/* begin Box, BlockContent */
+.webblockcontent {
+   background:#DEF3F7;
+}
+.webblockcontent-body ul li{
+   height: 1%;
+}
+
+/* end Box, BlockContent */
+
+/* begin Box, Post */
+.webpost {
+   background:#FFFFFF;
+}
+/* end Box, Post */
+
+/* begin PostIcons, PostHeaderIcons */
+.webpostheadericons span{
+   zoom: 1;
+}
+/* end PostIcons, PostHeaderIcons */
+
+/* begin PostBullets */
+.webpost ul li, .webpost ol ul li
+{
+   height: 1%;
+   padding-left: 17px;
+   /* makes "ul li" not to align behind the image if they are in the same line */
+  overflow-x: visible;
+   overflow-y: hidden;
+}
+
+.webpost ul ol li
+{
+   background: none;
+   padding-left: 0;
+   /* overrides overflow for "ul li" and sets the default value */
+  overflow: visible;
+}
+/* end PostBullets */
+
+/* begin PostIcons, PostFooterIcons */
+.webpostfootericons span{
+   zoom: 1;
+}
+/* end PostIcons, PostFooterIcons */
+
+/* begin Footer */
+.webfooter-body{
+   padding-right: 0;
+   zoom:1;
+}
+.webfooter{
+   zoom:1;
+   background:#B2D1D7;
+}
+
+.webfooter-text
+{
+   height: 15px;
+}
+
+/* end Footer */
+
+/* begin LayoutCell, content */
+.websidebar1 {
+   width: auto;
+   background:#DEF3F7;
+}
+/* end LayoutCell, content */
+
+/* begin LayoutCell, sidebar1 */
+/* end LayoutCell, sidebar1 */
+
+#user-login-form ul li, ul.arttabs_primary li, ul.arttabs_secondary li
+{
+   behavior: expression(this.runtimeStyle.filter?'':this.runtimeStyle.filter="");
+}
+
+.BlockContent
+{
+   width: 100% !important;
+}

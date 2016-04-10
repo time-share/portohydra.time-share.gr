@@ -12,9 +12,11 @@ t:
  el:
   company: "Σύλλογος Χρονομεριστών ΠΟΡΤΟ ΥΔΡΑ"
   search: "Αναζήτηση"
+  findUsOn: "Βρείτε μας στο"
  en:
   company: "PORTO HYDRA Timeshare Owners Association"
   search: "Search"
+  findUsOn: "Find us on"
 
 # standard jekyll configuration
 exclude:

@@ -1,0 +1,62 @@
+<div class="webheader">
+    <div class="webheaderobject"></div>
+    <div class="weblogo"></div>
+</div>
+<div class="cleared reset-box"></div>
+<div class="webbar webnav">
+    <div class="webnav-outer">
+        <div class="webhmenu-extra2">
+            <div class="region region-extra2">
+                <div class="block block-locale" id="block-locale-language">
+                    <div class="webarticle content">
+                        <ul class="language-switcher-locale-url">
+                            {% assign versions=site.pages|where:"name",page.name %}
+                            {% for ver in versions %}
+                            {% if ver.lang != page.lang %}
+                            {% assign foundTranslation = "found" %}
+                            <li class="{{ver.lang}}{% if forloop.index==0 %} first{% endif %}">
+                                <a href="{{ver.url}}" class="language-link" hreflang="{{ver.lang}}">
+                                    <img class="language-icon" typeof="foaf:Image" src="{{site.url}}/images/flags/{{ver.lang}}.png" width="16" height="12"
+                                         {% if ver.lang == "en" %}alt="English" title="English" {%else%}alt="Ελληνικά" title="Ελληνικά" {% endif %} />
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                            {% if foundTranslation == null %}
+                            {% if page.lang == "en" %}
+                            <li class="lang-el first">
+                                <a href="{{site.url}}/" class="language-link" hreflang="el">
+                                    <img class="language-icon" typeof="foaf:Image" src="{{site.url}}/images/flags/el.png" width="16" height="12" title="Ελληνικά" alt="Ελληνικά"/>
+                                </a>
+                            </li>
+                            {%else%}
+                            <li class="lang-en first">
+                                <a href="{{site.url}}/en/" class="language-link" hreflang="en">
+                                    <img class="language-icon" typeof="foaf:Image" src="{{site.url}}/images/flags/en.png" title="English" alt="English" />
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="region region-navigation">
+
+            <div class="webhmenu-id">
+                <ul class="webhmenu">
+                    {% assign menuItems=site.pages| where: "lang",page.lang | sort:"menu_order" %}
+                    {% for item in menuItems %}
+                    {% unless item.menu_text == null %}
+                    <li class="leaf{% if forloop.first %} first{% else if foloopo.last %} last{% endif %}{% if page.name == item.name %} active-trail active{% endif %}">
+                        <a href="{{item.url}}" title="{{item.menu_text}}"{% if page.name == item.name %} class="active-trail active" {% endif %}>{{item.menu_text}}</a>
+                    </li>
+                    {% endunless %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cleared reset-box"></div>

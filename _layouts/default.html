@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{page.lang}}" class="{{page.lang}}">
+{% include head.html %}
+<body {% if page.body_class %}class="{{ page.body_class }}" {% endif %}>
+    <div id="webmain">
+        <div class="cleared reset-box"></div>
+        <div class="webbox websheet">
+            <div class="webbox-body websheet-body">
+                {% include menu.html %}
+                <div class="weblayout-wrapper">
+                    <div class="webcontent-layout">
+                        <div class="webcontent-layout-row">
+                            <div class="weblayout-cell webcontent">
+                                {{ content }}
+                            </div>
+                            {% include sidebar.html %}
+                        </div>
+                    </div>
+                </div>
+                {% include footer.html %}
+                <div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <div class="cleared"></div>
+    </div>
+    {% include scripts.html %}
+</body>
+</html>
