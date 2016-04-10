@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{page.lang}}" class="{{page.lang}}">
+{% include head.html %}
+<body {% if page.body_class %}class="{{ page.body_class }}" {% endif %}>
+    <div id="webmain">
+        <div class="cleared reset-box"></div>
+        <div class="webbox websheet">
+            <div class="webbox-body websheet-body">
+                {% include menu.html %}
+                <div class="weblayout-wrapper">
+                    <div class="webcontent-layout">
+                        <div class="webcontent-layout-row">
+                            <div class="weblayout-cell webcontent">
+                                <div class="webbox webpost">
+                                    <div class="webbox-body webpost-body">
+                                        <div class="webpost-inner webarticle">
+                                            <h2 class="webpostheader">{{ page.menu_text }}<span property="dc:title" content="{{ page.menu_text }}" class="rdf-meta element-hidden"></span></h2>
+                                            <h3>{{ page.date | date: "%d/%m/%Y"}}</h3>
+                                            <div class="webpostcontent">
+                                                <div class="field field-name-field-body">
+                                                    {{ content }}
+                                                    {% if site.shareaholic_app_id %}
+                                                    <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='{{site.shareaholic_app_id}}'></div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% include sidebar.html %}
+                        </div>
+                    </div>
+                </div>
+                {% include footer.html %}
+                <div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <div class="cleared"></div>
+    </div>
+    {% include scripts.html %}
+</body>
+</html>

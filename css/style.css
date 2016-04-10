@@ -5,7 +5,7 @@ Version: 1.0
 */
 #webmain, table
 {
-   font-family: Georgia, "Times New Roman", Times, Serif;
+   font-family: Arial, Helvetica, Sans-Serif;
    font-style: normal;
    font-weight: normal;
    font-size: 11px;
@@ -36,7 +36,6 @@ ul.webvmenu a
 .webpostcontent a:hover,
 .webpostcontent a.hovered
 {
-   font-family: Arial, Helvetica, Sans-Serif;
     font-size: 12px;
 }
 
@@ -57,7 +56,6 @@ ul.webvmenu a
 .weblogo-text, .weblogo-text a, .weblogo-text a:link, .weblogo-text a:visited, .weblogo-text a:hover,
 .webpostheader, .webpostheader a, .webpostheader a:link, .webpostheader a:visited, .webpostheader a:hover
 {
-   font-family: Georgia, "Times New Roman", Times, Serif;
    font-style: normal;
    font-weight: bold;
    font-size: 18px;
@@ -66,14 +64,12 @@ ul.webvmenu a
 
 .webpostcontent a
 {
-   font-family: Georgia, "Times New Roman", Times, Serif;
    text-decoration: underline;
    color: #2DA3BE;
 }
 
 .webpostcontent a:link
 {
-   font-family: Georgia, "Times New Roman", Times, Serif;
    text-decoration: underline;
    color: #2DA3BE;
 }
@@ -490,7 +486,6 @@ div.weblogo
 {
    display: block;
    text-align: center;
-   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
    font-size: 13px;
    text-decoration: none;
    padding: 0;
@@ -502,7 +497,6 @@ div.weblogo
 .weblogo-name a:visited, 
 .weblogo-name a:hover
 {
-   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
    font-size: 13px;
    text-decoration: none;
    padding: 0;
@@ -514,7 +508,6 @@ div.weblogo
 {
    display: block;
    text-align: center;
-   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
    font-size: 9px;
    padding: 0;
    margin: 0;
@@ -525,7 +518,6 @@ div.weblogo
 .weblogo-text a:visited,
 .weblogo-text a:hover
 {
-   font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
    font-size: 9px;
    padding: 0;
    margin: 0;
@@ -874,7 +866,6 @@ span.webbutton-wrapper>input.webbutton,
 span.webbutton-wrapper>button.webbutton
 {
    text-decoration: none;
-   font-family: Georgia, "Times New Roman", Times, Serif;
    font-style: normal;
    font-weight: normal;
    font-size: 11px;
@@ -929,7 +920,6 @@ span.webbutton-wrapper
 input, select, textarea
 {
    vertical-align: middle;
-   font-family: Georgia, "Times New Roman", Times, Serif;
    font-style: normal;
    font-weight: normal;
    font-size: 11px;
@@ -1126,7 +1116,6 @@ ul.webvmenu a
    cursor: pointer;
    z-index:0;
    text-decoration: none;
-   font-family: Georgia, "Times New Roman", Times, Serif;
    font-size: 11px;
    margin-left:0;
    margin-right:0;
@@ -1389,7 +1378,6 @@ div.webblock img
 {
    padding:3px;
    color: #1B4650;
-   font-family: Georgia, "Times New Roman", Times, Serif;
    font-size: 11px;
 }
 .webblockcontent-body table,
@@ -1400,7 +1388,6 @@ div.webblock img
 .webblockcontent-body a:hover
 {
    color: #1B4650;
-   font-family: Georgia, "Times New Roman", Times, Serif;
    font-size: 11px;
 }
 
@@ -1614,7 +1601,6 @@ fieldset
 .webpostheadericons a:visited,
 .webpostheadericons a:hover
 {
-   font-family: Georgia, "Times New Roman", Times, Serif;
    font-style: italic;
    font-weight: normal;
    color: #2B4D54;
@@ -1698,7 +1684,6 @@ span.webpostediticon:after
 
 .webpostcontent li
 {
-   font-family: Georgia, "Times New Roman", Times, Serif;
    font-size: 11px;
    color: #0E191B;
    padding: 0 0 0 17px;
@@ -1756,7 +1741,6 @@ blockquote a:visited, .webpostcontent blockquote a:visited, .webblockcontent blo
 blockquote a:hover, .webpostcontent blockquote a:hover, .webblockcontent blockquote a:hover, .webfooter blockquote a:hover
 {
    color: #081417;
-   font-family: Georgia, "Times New Roman", Times, Serif;
    text-align: left;
 }
 
@@ -1802,7 +1786,6 @@ blockquote
 .webpostfootericons a:visited,
 .webpostfootericons a:hover
 {
-   font-family: Georgia, "Times New Roman", Times, Serif;
    font-style: italic;
    font-weight: normal;
    color: #39666F;
@@ -1996,7 +1979,6 @@ div.webfooter img
 .webpage-footer a:visited,
 .webpage-footer a:hover
 {
-   font-family: Arial;
    font-size: 10px;
    letter-spacing: normal;
    word-spacing: normal;
@@ -2047,7 +2029,6 @@ body.webbody-nostyle, body.cke_show_borders, #tinymce body, #tinymce body.mceCon
 {
    background-image: none;
    background-color: #FFFFFF !important;
-   font-family: Georgia, "Times New Roman", Times, Serif;
    font-style: normal;
    font-weight: normal;
    font-size: 11px;
@@ -2392,7 +2373,6 @@ ul.contextual-links li
 
 ul.contextual-links li a
 {
-   font-family: Arial !important;
    font-style: normal !important;
    font-weight: normal !important;
    font-size: 12px !important;
@@ -2507,4 +2487,9 @@ a.contextual-links-trigger
 }
 label.error, .form-required {
     color: #ff0000;
+}
+
+h3 {
+    font-size: smaller;
+    color: #ADACAC;
 }

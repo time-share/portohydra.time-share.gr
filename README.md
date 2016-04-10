@@ -43,3 +43,18 @@ We have added shareaholic support. Create an account at https://shareaholic.com 
 <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='23126307'></div>
 ```
 
+## Importing from drupal
+
+Use the following mysql script to get the posts 
+```
+SELECT n.title, fdb.body_value, 
+                      fdb.body_summary, 
+                      DATE_FORMAT(FROM_UNIXTIME(n.created),'%Y-%m-%d'), 
+                      n.status, 
+                      n.nid
+               FROM portohydradb.drupal_node AS n, 
+                    portohydradb.drupal_field_data_body AS fdb
+               WHERE n.nid = fdb.entity_id 
+               AND n.vid = fdb.revision_id
+               order by n.created asc
+```

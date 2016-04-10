@@ -23,6 +23,20 @@
                             {% endif %}
                             {% endfor %}
                             {% if foundTranslation == null %}
+                            {% assign versions=site.posts|where:"title",page.title %}
+                            {% for ver in versions %}
+                            {% if ver.lang != page.lang %}
+                            {% assign foundTranslation = "found" %}
+                            <li class="{{ver.lang}}{% if forloop.index==0 %} first{% endif %}">
+                                <a href="{{ver.url}}" class="language-link" hreflang="{{ver.lang}}">
+                                    <img class="language-icon" typeof="foaf:Image" src="{{site.url}}/images/flags/{{ver.lang}}.png" width="16" height="12"
+                                         {% if ver.lang == "en" %}alt="English" title="English" {%else%}alt="Ελληνικά" title="Ελληνικά" {% endif %} />
+                                </a>
+                            </li>
+                            {% endif %}
+                            {% endfor %}
+                            {% endif %}
+                            {% if foundTranslation == null %}
                             {% if page.lang == "en" %}
                             <li class="lang-el first">
                                 <a href="{{site.url}}/" class="language-link" hreflang="el">
