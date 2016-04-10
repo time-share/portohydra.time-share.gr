@@ -18,6 +18,9 @@ t:
   search: "Search"
   findUsOn: "Find us on"
 
+gems:
+  - jekyll-redirect-from
+
 # standard jekyll configuration
 exclude:
 - Gemfile
