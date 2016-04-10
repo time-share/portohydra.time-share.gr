@@ -48,7 +48,7 @@
                 <ul class="webhmenu">
                     {% assign menuItems=site.pages| where: "lang",page.lang | sort:"menu_order" %}
                     {% for item in menuItems %}
-                    {% unless item.menu_text == null %}
+                    {% unless item.menu_order == null %}
                     <li class="leaf{% if forloop.first %} first{% else if foloopo.last %} last{% endif %}{% if page.name == item.name %} active-trail active{% endif %}">
                         <a href="{{item.url}}" title="{{item.menu_text}}"{% if page.name == item.name %} class="active-trail active" {% endif %}>{{item.menu_text}}</a>
                     </li>

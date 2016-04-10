@@ -148,6 +148,6 @@ a.gsc-trailing-more-results:link {
 .gs-promotion .gs-visibleUrl, .gs-promotion .gs-visibleUrl-short {
     color: #008000;
 }
-.gcsc-branding-text {
+.gcsc-branding,.gsc-above-wrapper-area,.gsc-resultsHeader {
     display: none;
 }
