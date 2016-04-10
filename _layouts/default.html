@@ -18,6 +18,9 @@
                                             <div class="webpostcontent">
                                                 <div class="field field-name-field-body">
                                                     {{ content }}
+                                                    {% if site.shareaholic_app_id %}
+                                                    <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='{{site.shareaholic_app_id}}'></div>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
