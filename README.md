@@ -1,7 +1,19 @@
 # portohydra.time-share.gr
 The http://portohydra.time-share.gr web site implemented in Jekyll.
 
-# How to setup dev environment
+# Template helpers
+
+To add a pdf file attachment, add it in the content folder and then link it in the page using the following
+short code:
+```
+{% include pdfFile.html file="AitisiXronomeriston.pdf" name="Enrollment application form" %}
+```
+
+# Development in local machine
+
+If you want to do local development (and not directly editing files in github) you will have to setup your box.
+
+## How to setup dev environment
 
 Download and install ruby (2.2.3 x64 was currently available) from http://rubyinstaller.org/downloads/
 Make sure you add the binaries to the path (there is an option in the installation)
@@ -22,7 +34,7 @@ Open a command prompt and run the Install.bat in the root of the gh-pages branch
 bundle install
 ```
 
-# How to develop
+## How to develop
 
 Open a command prompt and run the Update.bat in the root of the gh-pages branch to update the packages.
 Then use the Local.bat file to run the server.
@@ -30,6 +42,10 @@ Then use the Local.bat file to run the server.
 Navigate to http://localhost:4000 to see your local site. 
 
 Make sure you save the files using UTF-8 without signature (otherwise jenkyll won't understand the header to parse the file).
+
+# Before you reuse this site
+
+Tips on things build in this Jekyll template
 
 ## On the translation topic
 
