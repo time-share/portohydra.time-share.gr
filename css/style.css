@@ -2500,3 +2500,15 @@ img.error-image{
    margin-left: auto;
    margin-right: auto;
 }
+
+.item-list .pager {
+    clear: both;
+    text-align: center;
+}
+
+.item-list .pager li {
+    background-image: none;
+    display: inline;
+    list-style-type: none;
+    padding: 0.5em;
+}

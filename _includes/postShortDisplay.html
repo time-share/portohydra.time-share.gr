@@ -1,0 +1,30 @@
+<div class="node node-article node-teaser" about="{{ post.url }}" typeof="sioc:Item foaf:Document">
+    <div class="webbox webpost">
+        <div class="webbox-body webpost-body">
+            <div class="webpost-inner webarticle">
+                <h2 class="webpostheader"><a href="{{ post.url }}" title="{{ post.menu_text }}">{{ post.menu_text }}</a><span property="dc:title" content="{{ post.menu_text }}" class="rdf-meta element-hidden"></span></h2>
+                <div class="webpostheadericons webmetadata-icons">
+                    <span class="webpostdateicon"><span property="dc:date dc:created" content="{{ post.date}}" datatype="xsd:dateTime">{{ post.date | date: "%d/%m/%Y"}}</span></span>
+                </div>
+                <div class="webpostcontent">
+                    <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                        <div class="field-items">
+                            <div class="field-item even" property="content:encoded">
+                                {{ post.excerpt }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cleared"></div>
+                {% capture content_words %}{{ post.content | number_of_words }}{% endcapture %}
+                {% capture excerpt_words %}{{ post.excerpt | number_of_words }}{% endcapture %}
+                {% if excerpt_words != content_words %}
+                <div class="webpostfootericons webmetadata-icons">
+                    <span class="webpostcategoryicon"><a href="{{ post.url }}#ReadMore" rel="tag" title="{{ post.menu_text }}">{{ site.t[page.lang].readMore }}</a></span>
+                </div>
+                {% endif %}
+            </div>
+            <div class="cleared"></div>
+        </div>
+    </div>
+</div>

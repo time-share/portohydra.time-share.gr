@@ -10,19 +10,37 @@ google_search: 003860276827165511839:z-jvfny0y24
 contactform_mailTo: portohydra@time-share.gr
 webmaster_mail: svris@thinkit.gr
 excerpt_separator: <!--more-->
+page_size: 5
 
 t: 
  el:
   company: "Σύλλογος Χρονομεριστών ΠΟΡΤΟ ΥΔΡΑ"
   search: "Αναζήτηση"
   findUsOn: "Βρείτε μας στο"
+  readMore: "Διαβάστε περισσότερα"
+  youNeedAdobe: "Εάν δεν μπορείτε να διαβάσετε τα .pdf αρχεία, χρειάζεται να κατεβάσετε τον Adobe Reader"
+  downloadAdobeFrom: "είναι δωρεάν και τον κατεβάζετε από εδώ"
+  pages: Σελίδες
+  pagesFirst: πρώτη
+  pagesPrevious: προηγούμενη
+  pagesLast: τελευταία
+  pagesNext: επόμενη
  en:
   company: "PORTO HYDRA Timeshare Owners Association"
   search: "Search"
   findUsOn: "Find us on"
+  readMore: "Read more"
+  youNeedAdobe: "If you can't open the .pdf files, you will need to download and install Adobe Reader"
+  downloadAdobeFrom: "this is free application and you can download from here"
+  pages: Pages
+  pagesFirst: first
+  pagesPrevious: previous
+  pagesLast: last
+  pagesNext: next
 
 gems:
   - jekyll-redirect-from
+  - jekyll-paginate
 
 # standard jekyll configuration
 exclude:

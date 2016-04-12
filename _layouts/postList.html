@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{{page.lang}}" class="{{page.lang}}">
+{% include head.html %}
+<body {% if page.body_class %}class="{{ page.body_class }}" {% endif %}>
+    <div id="webmain">
+        <div class="cleared reset-box"></div>
+        <div class="webbox websheet">
+            <div class="webbox-body websheet-body">
+                {% include menu.html %}
+                <div class="weblayout-wrapper">
+                    <div class="webcontent-layout">
+                        <div class="webcontent-layout-row">
+                            <div class="weblayout-cell webcontent">
+                                <div class="webbox webpost">
+                                    <div class="webbox-body webpost-body">
+                                        <div class="webpost-inner webarticle">
+                                            <h2 class="webpostheader">{{ page.menu_text }}<span property="dc:title" content="{{ page.menu_text }}" class="rdf-meta element-hidden"></span></h2>
+                                            <div class="webpostcontent">
+                                                <div class="field field-name-field-body">
+                                                    {% assign languageDisplayedPosts=site.posts | where:"lang", page.lang %}
+                                                    {% assign pageStartIndex = page.page_no | minus:1 | times: site.page_size %}
+                                                    {% assign pageEndIndex = pageStartIndex | plus:site.page_size | minus:1 %}
+                                                    {% assign maxPosts = languageDisplayedPosts.size | minus: 1 %}
+                                                    {% if pageEndIndex >  maxPosts %}
+                                                    {% assign pageEndIndex = maxPosts %}
+                                                    {% endif %}
+                                                    {% for postIndex in (pageStartIndex..pageEndIndex) %}
+                                                    {% assign post=languageDisplayedPosts[postIndex]%}
+                                                    {% include postShortDisplay.html %}
+                                                    {% endfor %}
+                                                    {% assign totalPages = maxPosts | divided_by: site.page_size %}
+                                                    {% if maxPosts | modulo: site.page_size > 0%}
+                                                    {% assign totalPages = totalPages | plus: 1 %}
+                                                    {% endif %}
+                                                    {% if totalPages > 1 %}
+                                                    <h2 class="element-invisible">{{site.t[page.lang].pages}}</h2>
+                                                    <div class="item-list">
+                                                        <ul class="pager">
+                                                            {% if pageStartIndex > 0 %}
+                                                            <li class="pager-first first"><a title="{{site.t[page.lang].pagesFirst}}" href="/{{page.lang}}/news/">« {{site.t[page.lang].pagesFirst}}</a></li>
+                                                            <li class="pager-previous"><a title="{{site.t[page.lang].pagesPrevious}}" href="/{{page.lang}}/news/page/{{page.page_no | minus: 1 }}">‹ {{site.t[page.lang].pagesPrevious}}</a></li>
+                                                            {% endif %}
+                                                            {% for pageNo in (1..totalPages) %}
+                                                            {% if pageNo == page.page_no %}
+                                                            <li class="pager-current">{{pageNo}}</li>
+                                                            {% else %}
+                                                            <li class="pager-item"><a href="/{{page.lang}}/news/page/{{pageNo}}">{{pageNo}}</a></li>
+                                                            {% endif %}
+                                                            {% endfor %}
+                                                            {% if maxPosts > pageEndIndex %}
+                                                            <li class="pager-next"><a title="{{site.t[page.lang].pagesNext}}" href="/{{page.lang}}/news/page/{{page.page_no | plus: 1 }}">{{site.t[page.lang].pagesNext}} ›</a></li>
+                                                            <li class="pager-last last"><a title="{{site.t[page.lang].pagesLast}}" href="/{{page.lang}}/news/page/{{totalPages }}">{{site.t[page.lang].pagesLast}} »</a></li>
+                                                            {% endif %}
+                                                        </ul>
+                                                    </div>
+                                                    {% endif %}
+                                                    {% if site.shareaholic_app_id %}
+                                                    <div class='shareaholic-canvas' data-app='share_buttons' data-app-id='{{site.shareaholic_app_id}}'></div>
+                                                    {% endif %}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% include sidebar.html %}
+                        </div>
+                    </div>
+                </div>
+                {% include footer.html %}
+                <div class="cleared"></div>
+            </div>
+        </div>
+        <div class="cleared"></div>
+        <div class="cleared"></div>
+    </div>
+    {% include scripts.html %}
+</body>
+</html>

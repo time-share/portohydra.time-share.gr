@@ -8,6 +8,11 @@ short code:
 ```
 {% include pdfFile.html file="AitisiXronomeriston.pdf" name="Enrollment application form" %}
 ```
+In the end of the post, don't forget to add
+```
+{% include getAdobe.html %}
+```
+
 
 # Development in local machine
 
@@ -74,3 +79,9 @@ SELECT n.title, fdb.body_value,
                AND n.vid = fdb.revision_id
                order by n.created asc
 ```
+Note that attachments are not visible in this query.
+
+## Custom pagination
+
+To overcome the poor pagination support of Jekyll, we created a custom on and you will have to manually add the pages (news.html). 
+This allows us to have custom pagination per language which wouldn't be feasible without plugin support.
