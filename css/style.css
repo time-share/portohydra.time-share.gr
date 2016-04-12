@@ -2512,3 +2512,14 @@ img.error-image{
     list-style-type: none;
     padding: 0.5em;
 }
+
+.webpostcontent table td+td {
+    text-align: center;
+}
+
+table.theBoard td, table.theBoard th {
+    border: none;
+}
+table.theBoard td {
+    text-align: center;
+}
