@@ -2,7 +2,7 @@
     <div class="webbox webpost">
         <div class="webbox-body webpost-body">
             <div class="webpost-inner webarticle">
-                <h2 class="webpostheader"><a href="{{ post.url }}" title="{{ post.menu_text }}">{{ post.menu_text }}</a><span property="dc:title" content="{{ post.menu_text }}" class="rdf-meta element-hidden"></span></h2>
+                <h2 class="webpostheader"><a href="{{ post.url }}" title="{{ post.html_title }}">{{ post.html_title }}</a><span property="dc:title" content="{{ post.html_title }}" class="rdf-meta element-hidden"></span></h2>
                 <div class="webpostheadericons webmetadata-icons">
                     <span class="webpostdateicon"><span property="dc:date dc:created" content="{{ post.date}}" datatype="xsd:dateTime">{{ post.date | date: "%d/%m/%Y"}}</span></span>
                 </div>
