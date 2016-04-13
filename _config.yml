@@ -51,3 +51,4 @@ exclude:
 - CNAME
 - "*.sln"
 - "*.suo"
+- CleanupCss.js

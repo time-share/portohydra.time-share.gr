@@ -48,6 +48,19 @@ Navigate to http://localhost:4000 to see your local site.
 
 Make sure you save the files using UTF-8 without signature (otherwise jenkyll won't understand the header to parse the file).
 
+## Clean up css
+
+In order to cleanup the drup css we used the uncss node module. Install [node.js](https://nodejs.org/) and add the following packages:
+```
+npm install uncss
+npm install walk
+```
+Then, having jekyll runing, in the root of this site execute the script:
+```
+node CleanupCss.js
+```
+This will produce a style.css file in the root which you can use to replace the existing one in the css folder.
+
 # Before you reuse this site
 
 Tips on things build in this Jekyll template
