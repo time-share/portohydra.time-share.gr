@@ -12,7 +12,14 @@ In the end of the post, don't forget to add
 ```
 {% include getAdobe.html %}
 ```
-
+To mark a post as draft, add in the meta tags
+```
+isDraft: true
+```
+If you don't want a page to appear in the sitemap.xml add the following tag
+```
+sitemap_exclude: true
+```
 
 # Development in local machine
 

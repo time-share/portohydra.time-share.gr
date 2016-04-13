@@ -17,7 +17,7 @@
                                             <h2 class="webpostheader">{{ page.menu_text }}<span property="dc:title" content="{{ page.menu_text }}" class="rdf-meta element-hidden"></span></h2>
                                             <div class="webpostcontent">
                                                 <div class="field field-name-field-body">
-                                                    {% assign languageDisplayedPosts=site.posts | where:"lang", page.lang %}
+                                                    {% assign languageDisplayedPosts=site.posts | where:"lang", page.lang | where:"isDraft", '' %}
                                                     {% assign pageStartIndex = page.page_no | minus:1 | times: site.page_size %}
                                                     {% assign pageEndIndex = pageStartIndex | plus:site.page_size | minus:1 %}
                                                     {% assign maxPosts = languageDisplayedPosts.size | minus: 1 %}
