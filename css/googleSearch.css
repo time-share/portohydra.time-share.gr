@@ -155,3 +155,18 @@ a.gsc-trailing-more-results:link {
 .gsc-adBlock {
     display: none;
 }
+
+.gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top, .gs-spelling, .gsc-control-cse {
+    padding: 0
+}
+
+.webarticle .gsc-control-cse th, .webarticle .gsc-control-cse td {
+    border: none;
+    padding: 0;
+}
+.webarticle .gsc-control-cse table {
+    margin: 0;
+}
+.gsc-results .gsc-cursor-box {
+    margin: 0;
+}
