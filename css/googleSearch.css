@@ -1,11 +1,11 @@
 ﻿.gsc-control-cse {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     border-color: #FFFFFF;
     background-color: #FFFFFF;
 }
 
     .gsc-control-cse .gsc-table-result {
-        font-family: Arial, sans-serif;
+        font-family: 'Open Sans', sans-serif;
     }
 
 input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {

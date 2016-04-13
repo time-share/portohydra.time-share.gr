@@ -52,3 +52,4 @@ exclude:
 - "*.sln"
 - "*.suo"
 - CleanupCss.js
+- _template.html
