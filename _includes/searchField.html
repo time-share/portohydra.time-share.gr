@@ -1,7 +1,4 @@
-{% assign actionUrl = "/search/" %}
-{% if page.lang != "el" %}
-{% capture actionUrl %}/{{ page.lang }}{{ actionUrl }}{% endcapture %}
-{% endif %}
+{% capture actionUrl %}/{{ page.lang }}/search/{% endcapture %}
 <!-- Custom search box using http://stackoverflow.com/questions/2174187/google-custom-search-with-custom-search-box-and-button -->
 <form action="{{actionUrl}}" method="GET" accept-charset="UTF-8">
     <div>
