@@ -110,6 +110,6 @@ Note that attachments are not visible in this query.
 
 ## Custom pagination
 
-To overcome the poor pagination support of Jekyll, we created a custom one. This requires us to to manually add the pages (news.html).
+To overcome the poor pagination support of Jekyll, we created a custom one. This requires us to manually add the pages (news.html).
 Just copy past the news_page_2.html and change the page_no and the title.
 This allows us to have custom pagination per language which wouldn't be feasible without plugin support.
