@@ -81,8 +81,8 @@ Tips on things build in this Jekyll template
 
 ## On the translation topic
 
-We are going to use [Html Iso language for each post](http://www.w3schools.com/tags/ref_language_codes.asp).
-We will follow a technique similar to https://www.sylvaindurand.org/making-jekyll-multilingual/.
+We are using [Html Iso language for each post](http://www.w3schools.com/tags/ref_language_codes.asp).
+We followed a technique similar to https://www.sylvaindurand.org/making-jekyll-multilingual/.
 
 ## Various scripts
 
@@ -110,5 +110,6 @@ Note that attachments are not visible in this query.
 
 ## Custom pagination
 
-To overcome the poor pagination support of Jekyll, we created a custom on and you will have to manually add the pages (news.html). 
+To overcome the poor pagination support of Jekyll, we created a custom one. This requires us to to manually add the pages (news.html).
+Just copy past the news_page_2.html and change the page_no and the title.
 This allows us to have custom pagination per language which wouldn't be feasible without plugin support.
