@@ -21,6 +21,13 @@ If you don't want a page to appear in the sitemap.xml add the following tag
 sitemap_exclude: true
 ```
 
+# Day-2-day admin tools
+Here is a list of services that relate to admin activities:
+- [Google search console](https://www.google.com/webmasters/tools/dashboard?hl=en&siteUrl=http://portohydra.time-share.gr/)
+- [Google custom search](https://cse.google.com/cse/all)
+- [Google analytics](https://analytics.google.com/analytics/web/)
+- [Shareaholic](https://shareaholic.com/publisher_tools)
+
 # Development in local machine
 
 If you want to do local development (and not directly editing files in github) you will have to setup your box.
