@@ -13,6 +13,14 @@ webmaster_mail: svris@thinkit.gr
 excerpt_separator: <!--more-->
 page_size: 5
 
+defaults:
+ -
+   scope:
+    path: "" # all files in project
+   values:
+    isDraft: ""
+    sitemap_exclude: ""
+
 t: 
  el:
   company: "Σύλλογος Χρονομεριστών ΠΟΡΤΟ ΥΔΡΑ"
