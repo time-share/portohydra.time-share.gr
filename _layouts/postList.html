@@ -37,7 +37,8 @@
                                                     {% include postShortDisplay.html %}
                                                     {% endfor %}
                                                     {% assign totalPages = maxPosts | divided_by: site.page_size %}
-                                                    {% if maxPosts | modulo: site.page_size > 0%}
+													{% assign remainingPages = maxPosts | modulo: site.page_size %}
+                                                    {% if  remainingPages > 0%}
                                                     {% assign totalPages = totalPages | plus: 1 %}
                                                     {% endif %}
                                                     {% if totalPages > 1 %}

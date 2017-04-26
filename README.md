@@ -64,7 +64,7 @@ Make sure you save the files using UTF-8 without signature (otherwise jenkyll wo
 
 ## Clean up css
 
-In order to cleanup the drup css we used the uncss node module. Install [node.js](https://nodejs.org/) and add the following packages:
+In order to cleanup the drupal css we used the uncss node module. Install [node.js](https://nodejs.org/) and add the following packages:
 ```
 npm install uncss
 npm install walk
