@@ -1,8 +1,17 @@
+// Get the settings from attributes
+var searchKey = $("#cse").attr("data-key");
+var lang = $("#cse").attr("data-lang");
+window.__gcse = {
+  callback: searchCallback
+};
+function searchCallback(){
+	$("#cse").hide();
+}
 (function () {
     var gcse = document.createElement('script');
     gcse.type = 'text/javascript';
     gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + window.googleSearchContext;
+    gcse.src = 'https://cse.google.com/cse.js?language='+ lang + '&cx=' + searchKey;
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(gcse, s);
 })();
