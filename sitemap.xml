@@ -6,7 +6,7 @@ sitemap_exclude: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {% assign indexedPages = site.pages | where:"sitemap_exclude", '' %}
   {% for page in  indexedPages %}
-  {% unless page.name == 'redirect.html' or page.name contains '.css' %}
+  {% unless (page.name == 'redirect.html' or page.url contains 'assets/css/') %}
   <url>
     <loc>{{site.url}}{{ page.url }}</loc>
     {% assign versions=site.pages|where:"name",page.name %}
